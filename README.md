@@ -1,7 +1,5 @@
 ### Querying the BooksRead table
 
-**Branch name:** dynamodbquery-prework
-
 Expected time required: 10 min
 
 You've created a table that keeps track of all the books you and your co-workers have read. You want to be able to
@@ -24,9 +22,6 @@ testing.
 
 The unit tests in `BookDAOTest` are set-up with a mock database so that you can test your methods offline. The `main()`
 method is set-up in `BookApp` so that you can connect to the real BooksRead table and test your methods that way.
-
-When you've finished writing your code and testing, make sure rde workflow `dynamodbquery-prework-query` 
-is passing and push.
 
 HINT:
 * [I'm getting the error 'no HASH key value present' when I attempt to query the table!](./hints/hint-01.md)
