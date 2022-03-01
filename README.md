@@ -24,4 +24,4 @@ The unit tests in `BookDAOTest` are set-up with a mock database so that you can 
 method is set-up in `BookApp` so that you can connect to the real BooksRead table and test your methods that way.
 
 HINT:
-* [I'm getting the error 'no HASH key value present' when I attempt to query the table!](./hints/hint-01.md)
+* [I'm getting the error 'no HASH key value present' when I attempt to query the table!](./hints/hint_01.md)
