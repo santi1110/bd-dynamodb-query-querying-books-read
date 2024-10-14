@@ -1,4 +1,5 @@
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
 
 import java.util.List;
 
@@ -19,9 +20,14 @@ public class BookDAO {
      * @param employeeId the employee ID
      * @return the PaginatedQueryList that is returned from the query
      */
-    public List<Book> getBooksReadByEmployee(String employeeId) { //(Book book) {
+    public List<Book> getBooksReadByEmployee(String employeeId) {
+        Book bookKey = new Book();
+        bookKey.setId(employeeId);
+        DynamoDBQueryExpression<Book> queryExpression = new DynamoDBQueryExpression<Book>()
+                .withHashKeyValues(bookKey);
+        //(Book book) {
         //TODO: implement
-        return null;
+        return mapper.query(Book.class,queryExpression);
     }
 
 }
